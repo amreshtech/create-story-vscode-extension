@@ -4,6 +4,7 @@
 	"description": "This VSCode plugin can help you generate storybook files for your React JSX files. Currently, it works only with pure React functional components & styled components. It also accepts default props from the file when defined and adds them to generated storybook files.",
 	"publisher": "amreshmishra",
 	"version": "1.0.0",
+	"icon": "create-story-icon.png",
 	"engines": {
 		"vscode": "^1.40.0"
 	},
