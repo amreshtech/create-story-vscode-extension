@@ -1,0 +1,19 @@
+import React from 'react';
+import <%= componentName %> from './<%= filename %>';
+<% if (booleanValues.length || Object.entries(colorValues).length || Object.entries(rangeValues).length || Object.entries(textValues).length ) {%>import{withKnobs<% if (booleanValues.length) {%>,boolean<%}%><% if (Object.entries(colorValues).length) {%>,color<%}%><% if (Object.entries(textValues).length) {%>,text<%}%><% if (Object.entries(rangeValues).length) {%>,number<%}%> } from "@storybook/addon-knobs";<%}%>
+
+export default {
+    title: '<%= componentName %>',
+    <% if (booleanValues.length || Object.entries(colorValues).length || Object.entries(rangeValues).length || Object.entries(textValues).length ) {%>decorators: [withKnobs]<%}%>
+};
+
+export const standard = () => <<%= componentName-%>
+    <% if (booleanValues.length) {for(var i=0; i < booleanValues.length; i++) {%>
+    <%= booleanValues[i]%>={boolean("<%=booleanValues[i]%>", false)}<%}}-%>
+    <% if (Object.entries(colorValues).length) {for(var i=0; i < Object.entries(colorValues).length; i++) {%>
+    <%= Object.keys(colorValues)[i]%>={color("<%=Object.keys(colorValues)[i]%>", "<%=Object.values(colorValues)[i]%>")}<%}}-%>
+    <% if (Object.entries(textValues).length) {for(var i=0; i < Object.entries(textValues).length; i++) {%>
+    <%= Object.keys(textValues)[i]%>={text("<%=Object.keys(textValues)[i]%>","<%=Object.values(textValues)[i]%>")}<%}}-%>
+    <% if (Object.entries(rangeValues).length) {for(var i=0; i < Object.entries(rangeValues).length; i++) {%>
+    <%= Object.keys(rangeValues)[i]%>={number("<%=Object.keys(rangeValues)[i]%>", "<%=Object.values(rangeValues)[i]%>",{range: true, max: <%=(+Object.values(rangeValues)[i]+100).toString()%>})}<%}}%>
+/>;

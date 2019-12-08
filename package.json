@@ -1,0 +1,58 @@
+{
+	"name": "create-story",
+	"displayName": "Create Story",
+	"description": "This VSCode plugin can help you generate storybook files for your React JSX files. Currently, it works only with pure React functional components & styled components. It also accepts default props from the file when defined and adds them to generated storybook files.",
+	"publisher": "amreshmishra",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.createStory"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.createStory",
+				"title": "Create Story"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "resourceLangId == javascriptreact",
+					"command": "extension.createStory"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.40.0",
+		"eslint": "^6.6.0",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"@babel/core": "^7.7.4",
+		"@babel/plugin-transform-react-jsx": "^7.7.4",
+		"babel-plugin-transform-imports": "^2.0.0",
+		"babel-plugin-transform-react-jsx": "^6.24.1",
+		"ejs": "^3.0.1",
+		"supports-color": "^7.1.0",
+		"vsce": "^1.70.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/amreshtech/create-story-vscode-extension.git"
+	}
+}

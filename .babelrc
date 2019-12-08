@@ -1,0 +1,30 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage",
+          "corejs": 3
+        },
+        "@babel/preset-react"
+      ]
+    ],
+    "plugins": [
+      "import-graphql",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-transform-react-jsx",
+      [
+        "babel-plugin-styled-components",
+        {
+          "displayName": true,
+          "fileName": true,
+          "ssr": false,
+          "minify": true,
+          "transpileTemplateLiterals": true,
+          "pure": true,
+          "module": false
+        }
+      ]
+    ]
+  }  
