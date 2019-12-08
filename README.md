@@ -1,16 +1,8 @@
-# create-story README
-
 ## Features
 
 This VSCode extension can help you generate a starter storybook file for your React JSX files. Currently, it works only with pure React functional components. It also accepts default props from the file when defined and adds them to generated storybook file.
 
-\!\[React File\]\(reactfile.png\)
-
-\!\[Context Menu\]\(contextmenu.png\)
-
-\!\[Command Palette\]\(commandpalette.png\)
-
-\!\[Generated Story\]\(generatedstory.png\)
+![](screenshot.gif)
 
 ## Requirements
 
