@@ -7,11 +7,13 @@ This VSCode extension can help you generate a starter storybook file for your Re
 ## Requirements
 
 This plugin requires following dependencies to perform at its best.
-* Storybook
-* Knobs add-on for Storybook
+
+- Storybook
+- Controls add-on for Storybook
 
 ## Release Notes
 
-### 1.0.0
+### 2.0.0
 
-Initial release of Create Story extension for VS Code.
+- Breaking Change: Updated to support Storybook v6.0
+- Replace Storybook Knobs add-on with Storybook Controls
