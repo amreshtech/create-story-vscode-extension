@@ -7,7 +7,7 @@ export default {
     <% if (booleanValues.length || Object.entries(colorValues).length || Object.entries(rangeValues).length || Object.entries(textValues).length ) {%>decorators: [withKnobs]<%}%>
 };
 
-export const standard = () => <<%= componentName-%>
+export const <%= componentName.toLowerCase() %> = () => <<%= componentName-%>
     <% if (booleanValues.length) {for(var i=0; i < booleanValues.length; i++) {%>
     <%= booleanValues[i]%>={boolean("<%=booleanValues[i]%>", false)}<%}}-%>
     <% if (Object.entries(colorValues).length) {for(var i=0; i < Object.entries(colorValues).length; i++) {%>
