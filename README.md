@@ -1,3 +1,11 @@
+> ## Deprecation Notice!
+>
+> Due to ever changing Storybook Story format, I have decided to deprecate this VSCode extension.
+> It makes more sense for you to use [PlopJS](https://plopjs.com) to adapt to your own
+> requirements.
+>
+>
+
 ## Features
 
 This VSCode extension can help you generate a starter storybook file for your React JSX files. Currently, it works only with pure React functional components. It also accepts default props from the file when defined and adds them to generated storybook file.
